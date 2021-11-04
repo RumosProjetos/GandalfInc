@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto.Lib.Entidades
 {
-    public class Cliente : Pessoa
+    public class CategoriaProduto : Entidade
     {
-        public DateTime DataNascimento { get; set; }
     }
 }

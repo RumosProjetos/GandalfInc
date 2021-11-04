@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Projeto.Lib.Entidades
 {
-    public class Cliente : Pessoa
+    public enum TipoPagamento
     {
-        public DateTime DataNascimento { get; set; }
+        Indefinido = 0,
+        Multibanco = 1,
+        Dinheiro = 2,
+        MbWay = 3
     }
 }

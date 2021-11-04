@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projeto.Lib.Entidades
 {
-    public class Cliente : Pessoa
+    //Usuario ou Utilizador
+    public class Usuario : Entidade
     {
-        public DateTime DataNascimento { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

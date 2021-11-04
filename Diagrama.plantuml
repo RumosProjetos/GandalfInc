@@ -1,0 +1,14 @@
+@startuml
+class PontoDeVenda
+class Usuario
+class Cliente
+class Venda
+class Produto
+class Estoque
+class Loja
+class TipoPagamento
+class Pagamento
+class Recibo
+class Fabricante
+class CategoriaProduto
+@enduml
