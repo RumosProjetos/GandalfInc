@@ -1,4 +1,4 @@
-﻿namespace Projeto.Lib.Entidades
+﻿namespace Projeto.Lib.Entidades.Pessoas
 {
     public abstract class Pessoa : Entidade
     {

@@ -1,4 +1,4 @@
-﻿namespace Projeto
+﻿namespace Projeto.Lib
 {
     /// <summary>
     /// Classe apenas para exemplo. Deve ser descartada

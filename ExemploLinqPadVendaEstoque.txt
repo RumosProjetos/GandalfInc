@@ -1,0 +1,25 @@
+void Main()
+{
+	var estoque = new List<Produto>();
+
+	estoque.Add(new Produto {Nome = "produto 01", Referencia="A",  Identificador = Guid.NewGuid()});
+	estoque.Add(new Produto {Nome = "produto 01", Referencia="A",Identificador = Guid.NewGuid()});
+	estoque.Add(new Produto {Nome = "produto 01", Referencia="A",Identificador = Guid.NewGuid()});
+	
+	
+	estoque.Dump("Apresentar Estoque");
+	estoque.Count.Dump("Quantidade em Estoque");
+	
+	
+	//Venda
+	estoque.RemoveRange(0, 2);
+	estoque.Dump("Apresentar Estoque");
+}
+
+class Produto{
+	public Guid Identificador { get; set; }
+	public string Referencia { get; set; }
+	public string Nome { get; set; }
+}
+
+// You can define other methods, fields, classes and namespaces here

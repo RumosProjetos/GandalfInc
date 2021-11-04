@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Projeto.Lib.Entidades.Pessoas;
+using System;
 
-namespace Projeto.Lib.Entidades
+namespace Projeto.Lib.Faturacao
 {
     public class PontoDeVenda
     {
+        public Guid Identificador { get; set; }
+        public Loja Loja { get; set; }
     }
 }

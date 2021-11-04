@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacao", "Documentaca
 	ProjectSection(SolutionItems) = preProject
 		Diagrama.plantuml = Diagrama.plantuml
 		Documentation\DiagramaClassesInicial.png = Documentation\DiagramaClassesInicial.png
+		ExemploLinqPadVendaEstoque.txt = ExemploLinqPadVendaEstoque.txt
+		Documentation\IdentificacaoDasClasses.png = Documentation\IdentificacaoDasClasses.png
 		Documentation\PROJETO I.pdf = Documentation\PROJETO I.pdf
 	EndProjectSection
 EndProject
