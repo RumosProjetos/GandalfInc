@@ -17,6 +17,11 @@ namespace Projeto.Lib.Faturacao
         public decimal ValorPagamento { get; set; }
         public DetalheVenda DetalheVenda { get; set; }  
 
+        public bool EfetivarVenda()
+        {
+
+            return true;
+        }
 
         public void GerarRecibo()
         {
