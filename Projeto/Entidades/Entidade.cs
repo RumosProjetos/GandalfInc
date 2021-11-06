@@ -9,7 +9,7 @@ namespace Projeto.Lib.Entidades
         public DateTime DataAlteracao { get; set; }
         public bool Ativo { get; set; }
 
-        public Entidade()
+        protected Entidade()
         {
             DataAlteracao = DateTime.Now;
             Identificador = Guid.NewGuid();

@@ -1,27 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Projeto.Lib.Entidades.Pessoas;
-using Projeto.Lib.Repositorios;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto.Lib.Repositorios.Tests
 {
     [TestClass()]
     public class RepositorioEntidadeTests
     {
-        /*
-         void Criar(T t);
-T ObterPorIdentificador(Guid guid);
-T ObterPorNome(string nome);
-List<T> ListarTodos();
-void Atualizar(T t, T novosDados);
-void Apagar(T t);
- */
-
-
         [TestMethod()]
         public void DeveCriarEntidadeTest()
         {
@@ -72,9 +57,11 @@ void Apagar(T t);
 
             //Act
             repo.Criar(cliente);
+            repo.ObterPorNome(nome);
 
             //Assert
             Assert.AreEqual(parametroExemplo, cliente.Ativo);
+            Assert.AreEqual(nome, repo.ObterPorNome(nome).Nome);
         }
     }
 }

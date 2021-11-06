@@ -16,13 +16,6 @@ namespace Projeto.Lib.Faturacao
         public TipoPagamento TipoPagamento { get; set; }
         public decimal ValorPagamento { get; set; }
         public DetalheVenda DetalheVenda { get; set; }  
-
-        public bool EfetivarVenda()
-        {
-
-            return true;
-        }
-
         public void GerarRecibo()
         {
             var sb = new StringBuilder();

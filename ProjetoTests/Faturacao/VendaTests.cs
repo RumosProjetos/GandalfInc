@@ -1,11 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Projeto.Lib.Entidades.Produtos;
-using Projeto.Lib.Faturacao;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto.Lib.Faturacao.Tests
 {
@@ -93,8 +88,7 @@ namespace Projeto.Lib.Faturacao.Tests
 
         #endregion Testes que não usam o TestInitializer
 
-
-        /******************************************************************************/
+        #region Testes que usam o testInitialize
         private Estoque estoqueCentral;
 
         [TestInitialize]
@@ -119,12 +113,14 @@ namespace Projeto.Lib.Faturacao.Tests
         {
             var vendaParaOjoao = new Venda
             {
-                DetalheVenda = new DetalheVenda { 
+                DetalheVenda = new DetalheVenda
+                {
                     Produtos = new List<Produto> {
                         new Produto { Nome = "SmartPhone XIAOMI" },
                         new Produto { Nome = "SmartPhone XIAOMI" },
                         new Produto { Nome = "SmartPhone XIAOMI" },
-                } }
+                }
+                }
             };
 
             //Act
@@ -134,9 +130,7 @@ namespace Projeto.Lib.Faturacao.Tests
             Assert.IsFalse(vendaPossivel);
         }
 
-
-
-        [DataTestMethod]        
+        [DataTestMethod]
         [DataRow(-10, "SmartPhone XIAOMI", false)]
         [DataRow(0, "SmartPhone XIAOMI", false)]
         [DataRow(1, "SmartPhone XIAOMI", true)]
@@ -163,5 +157,7 @@ namespace Projeto.Lib.Faturacao.Tests
             //Assert
             Assert.AreEqual(valorEsperado, vendaPossivel);
         }
+
+        #endregion Testes que usam o testInitialize
     }
 }

@@ -10,6 +10,8 @@ namespace Projeto.Lib.Faturacao
 
         public bool ValidarDisponibilidade(List<Produto> produtosSolicitados)
         {
+            //Usei nome apenas para simplificar
+            //Agrupar por tipo de produto ao invés de usar Foreach
             var quantidadePorProduto = produtosSolicitados
                 .GroupBy(x => x.Nome)
                 .Select(x =>
@@ -32,7 +34,7 @@ namespace Projeto.Lib.Faturacao
             foreach (var produtoNoPedido in quantidadePorProduto)
             {
                 //Usei nome apenas para simplificar
-                var quantidadeEmEstoque = ProdutosParaVenda.Where(x => x.Nome == produtoNoPedido.Nome).Count();
+                var quantidadeEmEstoque = ProdutosParaVenda.Count(x => x.Nome == produtoNoPedido.Nome);
                 if (produtoNoPedido.Quantidade > quantidadeEmEstoque)
                 {
                     return false;

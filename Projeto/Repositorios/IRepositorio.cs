@@ -9,7 +9,7 @@ namespace Projeto.Lib.Repositorios
         T ObterPorIdentificador(Guid guid);
         T ObterPorNome(string nome);
         List<T> ListarTodos();
-        void Atualizar(T t, T novosDados);
+        void Atualizar(Guid id, T novosDados);
         void Apagar(T t);
     }
 }

@@ -22,11 +22,11 @@ namespace Projeto.Lib.Repositorios
             entidades.Remove(t);
         }
 
-        public void Atualizar(Entidade t, Entidade novosDados)
+        public void Atualizar(Guid guid, Entidade novosDados)
         {
-            var temp = t.Identificador;
-            t = novosDados;
-            t.Identificador = temp;
+            var temp = entidades.FirstOrDefault(x => x.Identificador == guid);
+            temp = novosDados;
+            temp.Identificador = guid;
         }
 
         public List<Entidade> ListarTodos()

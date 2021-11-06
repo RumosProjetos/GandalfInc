@@ -7,7 +7,7 @@
         public string Telefone { get; set; }
         public string Email { get; set; }
 
-        public Pessoa()
+        protected Pessoa()
         {
             Morada = new Morada();
         }
