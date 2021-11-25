@@ -1,5 +1,4 @@
-﻿using Projeto.Lib;
-using System;
+﻿using System;
 
 namespace Projeto.ConsoleApp
 {

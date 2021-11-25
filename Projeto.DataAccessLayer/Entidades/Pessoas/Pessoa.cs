@@ -1,4 +1,4 @@
-﻿namespace Projeto.Lib.Entidades.Pessoas
+﻿namespace Projeto.DataAccessLayer.Entidades.Pessoas
 {
     public abstract class Pessoa : Entidade
     {

@@ -1,9 +1,9 @@
-﻿using Projeto.Lib.Entidades;
+﻿using Projeto.DataAccessLayer.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Projeto.Lib.Repositorios
+namespace Projeto.DataAccessLayer.Repositorios
 {
     public class RepositorioEntidade : IRepositorio<Entidade>
     {

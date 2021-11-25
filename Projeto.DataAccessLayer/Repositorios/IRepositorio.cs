@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Projeto.Lib.Repositorios
+namespace Projeto.DataAccessLayer.Repositorios
 {
     public interface IRepositorio<T>
     {

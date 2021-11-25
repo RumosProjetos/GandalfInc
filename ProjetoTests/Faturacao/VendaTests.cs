@@ -1,8 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Projeto.Lib.Entidades.Produtos;
+using Projeto.DataAccessLayer.Entidades.Produtos;
+using Projeto.DataAccessLayer.Faturacao;
+using Projeto.Lib.Faturacao;
 using System.Collections.Generic;
 
-namespace Projeto.Lib.Faturacao.Tests
+namespace Projeto.Tests.Faturacao
 {
     [TestClass()]
     public class VendaTests
@@ -40,7 +42,8 @@ namespace Projeto.Lib.Faturacao.Tests
             }
 
             //Act
-            var vendaPossivel = estoque.ValidarDisponibilidade(vendaParaOjoao.DetalheVenda.Produtos);
+            var logicaDeEstoque = new LogicaDeEstoque(estoque);
+            var vendaPossivel = logicaDeEstoque.ValidarDisponibilidade(vendaParaOjoao.DetalheVenda.Produtos);
 
             //Assert
             Assert.IsFalse(vendaPossivel);
@@ -80,7 +83,8 @@ namespace Projeto.Lib.Faturacao.Tests
             }
 
             //Act
-            var vendaPossivel = estoque.ValidarDisponibilidade(vendaParaOjoao.DetalheVenda.Produtos);
+            var logicaDeEstoque = new LogicaDeEstoque(estoque);
+            var vendaPossivel = logicaDeEstoque.ValidarDisponibilidade(vendaParaOjoao.DetalheVenda.Produtos);
 
             //Assert
             Assert.IsTrue(vendaPossivel);
@@ -124,7 +128,8 @@ namespace Projeto.Lib.Faturacao.Tests
             };
 
             //Act
-            var vendaPossivel = estoqueCentral.ValidarDisponibilidade(vendaParaOjoao.DetalheVenda.Produtos);
+            var logicaDeEstoque = new LogicaDeEstoque(estoqueCentral);
+            var vendaPossivel = logicaDeEstoque.ValidarDisponibilidade(vendaParaOjoao.DetalheVenda.Produtos);
 
             //Assert
             Assert.IsFalse(vendaPossivel);
@@ -152,7 +157,8 @@ namespace Projeto.Lib.Faturacao.Tests
             }
 
             //Act
-            var vendaPossivel = estoqueCentral.ValidarDisponibilidade(vendaParaOjoao.DetalheVenda.Produtos);
+            var logicaDeEstoque = new LogicaDeEstoque(estoqueCentral);
+            var vendaPossivel = logicaDeEstoque.ValidarDisponibilidade(vendaParaOjoao.DetalheVenda.Produtos);
 
             //Assert
             Assert.AreEqual(valorEsperado, vendaPossivel);

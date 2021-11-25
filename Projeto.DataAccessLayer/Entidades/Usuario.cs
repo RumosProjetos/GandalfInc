@@ -1,4 +1,4 @@
-﻿namespace Projeto.Lib.Entidades
+﻿namespace Projeto.DataAccessLayer.Entidades
 {
     //Usuario ou Utilizador
     public class Usuario : Entidade

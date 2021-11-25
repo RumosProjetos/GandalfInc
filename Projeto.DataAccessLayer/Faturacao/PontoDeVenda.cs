@@ -1,7 +1,7 @@
-﻿using Projeto.Lib.Entidades.Pessoas;
+﻿using Projeto.DataAccessLayer.Entidades.Pessoas;
 using System;
 
-namespace Projeto.Lib.Faturacao
+namespace Projeto.DataAccessLayer.Faturacao
 {
     public class PontoDeVenda
     {

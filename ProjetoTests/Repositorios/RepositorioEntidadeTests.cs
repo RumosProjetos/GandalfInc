@@ -1,8 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Projeto.Lib.Entidades.Pessoas;
+using Projeto.DataAccessLayer.Entidades.Pessoas;
+using Projeto.DataAccessLayer.Repositorios;
 using System;
 
-namespace Projeto.Lib.Repositorios.Tests
+namespace Projeto.Tests.Repositorios
 {
     [TestClass()]
     public class RepositorioEntidadeTests

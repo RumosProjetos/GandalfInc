@@ -1,12 +1,18 @@
-﻿using Projeto.Lib.Entidades.Produtos;
+﻿using Projeto.DataAccessLayer.Entidades.Produtos;
+using Projeto.DataAccessLayer.Faturacao;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Projeto.Lib.Faturacao
 {
-    public class Estoque
+    public class LogicaDeEstoque
     {
-        public List<Produto> ProdutosParaVenda { get; set; }
+        private Estoque _estoque { get; set; }
+
+        public LogicaDeEstoque(Estoque estoque)
+        {
+            _estoque = estoque;
+        }
 
         public bool ValidarDisponibilidade(List<Produto> produtosSolicitados)
         {
@@ -34,7 +40,7 @@ namespace Projeto.Lib.Faturacao
             foreach (var produtoNoPedido in quantidadePorProduto)
             {
                 //Usei nome apenas para simplificar
-                var quantidadeEmEstoque = ProdutosParaVenda.Count(x => x.Nome == produtoNoPedido.Nome);
+                var quantidadeEmEstoque = _estoque.ProdutosParaVenda.Count(x => x.Nome == produtoNoPedido.Nome);
                 if (produtoNoPedido.Quantidade > quantidadeEmEstoque)
                 {
                     return false;

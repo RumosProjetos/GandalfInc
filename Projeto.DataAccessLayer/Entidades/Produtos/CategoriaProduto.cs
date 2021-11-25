@@ -1,4 +1,4 @@
-﻿namespace Projeto.Lib.Entidades.Produtos
+﻿namespace Projeto.DataAccessLayer.Entidades.Produtos
 {
     public class CategoriaProduto : Entidade
     {

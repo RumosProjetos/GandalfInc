@@ -1,7 +1,7 @@
-﻿using Projeto.Lib.Entidades.Produtos;
+﻿using Projeto.DataAccessLayer.Entidades.Produtos;
 using System.Collections.Generic;
 
-namespace Projeto.Lib.Faturacao
+namespace Projeto.DataAccessLayer.Faturacao
 {
     public class DetalheVenda
     {

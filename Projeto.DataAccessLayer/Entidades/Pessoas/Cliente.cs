@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Projeto.Lib.Entidades.Pessoas
+namespace Projeto.DataAccessLayer.Entidades.Pessoas
 {
     public class Cliente : Pessoa
     {

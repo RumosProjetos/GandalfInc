@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Projeto.Lib.Faturacao
+namespace Projeto.DataAccessLayer.Faturacao
 {
     public enum TipoPagamento
     {

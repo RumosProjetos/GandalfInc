@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Projeto.Lib.Entidades
+namespace Projeto.DataAccessLayer.Entidades
 {
     public abstract class Entidade
     {

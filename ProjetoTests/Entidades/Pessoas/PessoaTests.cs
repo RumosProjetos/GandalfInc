@@ -1,7 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Projeto.DataAccessLayer.Entidades.Pessoas;
 using System;
 
-namespace Projeto.Lib.Entidades.Pessoas.Tests
+namespace Projeto.Tests.Entidades.Pessoas
 {
     [TestClass()]
     public class PessoaTests
@@ -18,7 +19,7 @@ namespace Projeto.Lib.Entidades.Pessoas.Tests
             pessoa.NumeroFiscal = "123456789";
             pessoa.Telefone = "999999999";
             pessoa.DataNascimento = new DateTime(1999, 01, 01);
-            
+
             //Act
             var possuiIdentificadorAtribuido = pessoa.Identificador != new Guid();
             var possuiDataAlteracaoAtribuida = pessoa.DataAlteracao != new DateTime();
