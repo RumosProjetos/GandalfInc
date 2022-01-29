@@ -6,7 +6,7 @@ namespace Projeto.DataAccessLayer.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            VERIFICAR 
+           
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
