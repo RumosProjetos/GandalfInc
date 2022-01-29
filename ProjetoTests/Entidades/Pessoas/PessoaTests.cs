@@ -11,14 +11,16 @@ namespace Projeto.Tests.Entidades.Pessoas
         public void DeveCriarClienteTest()
         {
             //Arrange
-            var pessoa = new Cliente();
-            pessoa.Morada.Endereco = "Rua das Casas";
-            pessoa.Morada.Complemento = "Falar com vizinha";
-            pessoa.Morada.CodigoPostal = "2830";
-            pessoa.Morada.Localidade = "Cidade";
-            pessoa.NumeroFiscal = "123456789";
-            pessoa.Telefone = "999999999";
-            pessoa.DataNascimento = new DateTime(1999, 01, 01);
+            var pessoa = new Cliente
+            {
+                Endereco = "Rua das Casas",
+                Complemento = "Falar com vizinha",
+                CodigoPostal = "2830",
+                Localidade = "Cidade",
+                NumeroFiscal = "123456789",
+                Telefone = "999999999",
+                DataNascimento = new DateTime(1999, 01, 01)
+            };
 
             //Act
             var possuiIdentificadorAtribuido = pessoa.Identificador != new Guid();

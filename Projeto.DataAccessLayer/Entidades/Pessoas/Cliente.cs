@@ -12,6 +12,7 @@ namespace Projeto.DataAccessLayer.Entidades.Pessoas
             get => base.Nome;
             set => base.Nome = value; 
         }
+
         public DateTime DataNascimento { get; set; }
 
         public virtual List<Venda> Compras { get; set; }

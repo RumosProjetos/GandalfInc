@@ -16,8 +16,8 @@ namespace Projeto.Lib.Faturacao
         {
             var sb = new StringBuilder();
             sb.AppendLine($"Fatura Recibo FRD {_venda.DataHoraVenda.Year}/{_venda.NumeroSerie}");
-            sb.AppendLine($"Loja: {_venda.PontoDeVenda.Loja.NumeroFiscal} - Ponto de Venda: {_venda.PontoDeVenda.Identificador} ");
-            sb.AppendLine($"Loja: {_venda.PontoDeVenda.Loja.Morada}");
+            sb.AppendLine($"Loja: {_venda.PontoDeVenda.Loja.NumeroFiscal} - Ponto de Venda: {_venda.PontoDeVenda.Id} ");
+            sb.AppendLine($"Loja: {_venda.PontoDeVenda.Loja.Endereco}");
             sb.AppendLine($"Vendedor: {_venda.Vendedor.Nome} Identificador: {_venda.Vendedor.Identificador} ");
             sb.AppendLine($"Data da Fatura/Recibo: {_venda.DataHoraVenda} ");
             sb.AppendLine($"Tipo Pagamento: {_venda.TipoPagamento} "); //TODO: TRocar enumerador por string
